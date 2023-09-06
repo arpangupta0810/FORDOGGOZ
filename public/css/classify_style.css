@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --classify-color: #b16116;
+  --secondary-color: #000000;
+  --third-color: #ffffff;
+  --fourth-color: grey;
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Poppins", sans-serif;
+  --third-font: "Pacifico", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  top: 0%;
+  left: 0%;
+  margin: 0%;
+  padding: 0%;
+  font-family: var(--primary-font);
+}
+
+.classify-section {
+  height: 100vh;
+  background-color: var(--secondary-color);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.classify-main img {
+  width: 5rem;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.classify-main {
+  background: url(./../img/classify.jpg);
+  background-size: cover;
+  clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.classify-main h2 {
+  color: var(--third-color);
+  font-family: var(--third-font);
+  font-size: 3.5rem;
+  text-shadow: var(--secondary-color) 1px 1px;
+  margin-top: 2rem;
+}
+
+.classify-main form button {
+  background-color: var(--classify-color);
+  color: var(--third-color);
+  padding: 0.4rem 0.2rem 0.5rem;
+  border: none;
+  font-family: var(--primary-font);
+  border-radius: 5px;
+  margin-top: 1rem;
+  width: 10rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.classify-main form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 2rem 3rem;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.classify-main form select,
+.classify-main form input {
+  background-color: rgba(26, 24, 24, 0.85);
+  color: var(--fourth-color);
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  font-family: var(--secondary-font);
+  font-size: 0.75rem;
+  border-radius: 5px;
+  min-width: 15rem;
+  text-align: center;
+}
+
+#classify-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 3rem;
+  color: var(--classify-color);
+  font-size: 1.7rem;
+  font-weight: bold;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.classify-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 2rem;
+  color: var(--classify-color);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.classify-result h3 {
+  font-size: 1.7rem;
+}
+
+#classify-ans {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: var(--third-color);
+}
+
+.contact {
+  background-color: var(--secondary-color);
+  padding: 2rem 5rem;
+  color: var(--third-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.contact .logo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.contact .logo img {
+  width: 3rem;
+}
+
+.contact .logo p {
+  font-family: var(--third-font);
+  font-size: 1.1rem;
+}
+
+.contact .aboutUS {
+  padding: 1rem;
+}
+
+.contact .aboutUS h3 {
+  font-family: var(--primary-font);
+  font-size: 1rem;
+}
+
+.contact .aboutUS p {
+  font-family: var(--secondary-font);
+  font-size: 0.8rem;
+  max-width: 15rem;
+  margin-top: 0.5rem;
+  text-align: justify;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  font-family: var(--primary-font);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.contact-form input,
+textarea {
+  margin: 0.5rem 0rem 0rem;
+  background-color: rgb(26, 24, 24);
+  color: var(--fourth-color);
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  font-family: var(--secondary-font);
+  font-size: 0.7rem;
+  border-radius: 5px;
+}
+
+.contact-form textarea {
+  max-width: 18.3rem;
+}
+
+.contact-form input {
+  height: 1rem;
+}
+
+.contact-form button {
+  background-color: var(--classify-color);
+  color: var(--third-color);
+  padding: 0.4rem 0.2rem 0.5rem;
+  border: none;
+  font-family: var(--primary-font);
+  border-radius: 5px;
+  margin-top: 0.5rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 0.5rem;
+  font-family: var(--primary-font);
+  color: var(--third-color);
+  background-color: var(--secondary-color);
+  font-size: 0.9rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.drop-container {
+  position: relative;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px dashed var(--third-color);
+  color: var(--third-color);
+  cursor: pointer;
+  transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+  background-color: rgba(26, 24, 24, 0.85);
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.drop-container:hover {
+  background: rgba(26, 24, 24, 0.938);
+  border-color: var(--third-color);
+  color: var(--third-color);
+}
+
+.drop-container:hover .drop-title {
+  color: var(--third-color);
+}
+
+.drop-title {
+  color: var(--third-color);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  transition: color 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

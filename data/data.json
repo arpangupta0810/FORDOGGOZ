@@ -1,0 +1,95 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hi", "Hey", "Is anyone there?", "Hello", "Hay"],
+     "responses": ["Hello", "Hi", "Hi there"]
+    },
+    {"tag": "goodbye",
+     "patterns": ["Bye", "See you later", "Goodbye"],
+     "responses": ["See you later", "Have a nice day", "Bye! Come back again"]
+    },
+    {"tag": "thanks",
+     "patterns": ["Thanks", "Thank you", "That's helpful", "Thanks for the help"],
+     "responses": ["Happy to help!", "Any time!", "My pleasure", "You're most welcome!"]
+    },
+    {"tag": "who",
+     "patterns": ["Who are you?", "What are you?", "Who you are?" ],
+     "responses": ["I.m Zeus, your bot assistant", "I'm Zeus, an Artificial Intelligent bot"]
+    },
+    {"tag": "name",
+    "patterns": ["what is your name", "what should I call you", "whats your name?"],
+    "responses": ["You can call me Zeus.", "I'm Zeus!", "Just call me as Zeus"]
+    },
+    
+    {"tag": "createaccount",
+    "patterns": ["I need to create a new account", "how to open a new account", "I want to create an account", "can you create an account for me", "how to open a new account"],
+    "responses": ["You can just easily create a new account from our web site", "Just go to our web site and follow the guidelines to create a new account"]
+    },
+    {"tag": "injured",
+    "patterns": ["found an injured dog", "injured dog", "injured puppy"],
+    "responses": ["you must stop its bleeding first through a clean cloth if its bleeding"]
+    },
+
+    {"tag": "overpopulation",
+        "patterns": ["overpopulation in society", "alot of dogs in society", "overpopulation of dogs","there is overpopulation of dogs in my society"],
+        "responses": ["Get in touch with the MCD or MCG who will forward the request to NGOs for sterilisation. Just make sure to have a dog-friendly person involved to make the process easier for dogs"]
+        },
+
+    {"tag": "bit",
+        "patterns": ["a dog bit me what should i do", "dog bit bleeding", "dog bit bleeding wound","dog bite"],
+        "responses": ["1)If the skin is not broken - wash the area with warm water and soap and you can apply a antiseptic solution to the area.\n2)If the skin is broken by not bleeding - clean the area using warm water, soap and a clean towel. Press the surrounding area to bleeding. This will help in removing the germs. Clean the blood and apply an antibacterial ointment.\n3)If the wound is bleeding - apply and press a clean cloth to the area to stop bleeding. Clean the area and apply a sterile bandage."]
+            },
+            
+    {"tag": "complain",
+        "patterns": ["dog complain", "stray dog complain", "stray dog trouble","complain","file a complaint","want to report about an incident regarding dog violence"],
+        "responses": ["You can visit the website of MCD and file the complaint on line with regard to the stray dog. You will be allotted a complaint number and the complaint would be addressed in the given time frame."]
+                    },
+                    
+                    
+    {"tag": "abused",
+        "patterns": ["a stray dog abused", "stray dog hurt","person abused a dog in my society"],
+        "responses": ["1)Gather as much evidence as you can.\n2)Shoot an e-mail to police and NGO’s in your area. They have to take an action on this.\n3)Mostly police try to not file FIR because it is a work for them so you have to take help of PFA or a good NGO."]
+                        },
+
+
+    {"tag": "help dog",
+        "patterns": ["help stray dogs", "help a stray dog","provide help to stray dogs","how can i help a stray dog"],
+        "responses": ["1)Identify the dogs incapable of surviving on their own.\n2)Contact an animal shelter or a community dog center.\n3)Arrange for some food.\n4)Find a temporary shelter for them.\n5)Take care and wait for professional help." ]
+                                            },
+
+    
+    {"tag": "abandoned",
+        "patterns": ["found an abandoned dog", "found a lost dog", "i found an abandoned dog near my society", "Me and my friends found a lost dog"],
+        "responses": [ "1)Secure the dog and inform a community dog centre.\n2)Click a picture of the dog and circulate it on social media and community social groups.\n3)Ensure that food and water are given to the dog.\n4)Arrange for a temporary shelter.\n5)If anyone claims of ownership verify thoroughly.\n6)If no one contacts or claims for ownership you can adopt the dog. If interested."]
+                                               },
+
+     {"tag": "shelter",
+        "patterns": ["stray dog shelter", "how to build shelter for stray dogs", "where can i build shelter for stray dogs "],
+        "responses": ["1)You cannot emphasize enough on making sure its on high ground. Else use cement bricks or boards to raise the level.\n2)Use simple rolls of fibreglass. You can get them at any hardware store for a few hundred Rs or less. Just staple them into a large cylinder then use wide tape to seal it.\n3)Put some old sheets at the bottom and the pups will love it. They will snuggle around it.\nGod bless."]
+                                                },
+                                                
+                                                
+    {"tag": "touch",
+        "patterns": ["is it ok to touch a stray dog", "is it okay to touch stray dogs", "is it okay to play with stray dogs","can i touch a stray dog","can i play with street dogs"],
+        "responses": ["Yes it is totally safe to touch and play with stray dogs."]
+                                                   },
+
+    {"tag": "behaviour",
+        "patterns": ["how to tell a stray dogs behaviour", "how to tell stray dog behavior", "how can i tell the behaviour of stray dog by seeing it"],
+        "responses": ["1)Wagging tail means dog is happy or it lokes you. In this case go forward and simply touch it. Do not hug though. It is a sign of dominance.\n 2)Straight tail pointing out means suspicious. In this case avoid unnecessary eye contact. Always approach an unkown dog from sideways and do not touch its head.\n3)Tail between the legs means afraid. Sit down and extend your hand. If it comes forward move slowly and touch on the neck or behind the ear. Avoid quick movements. "]
+
+    },
+    
+    
+    {"tag": "vet",
+        "patterns": ["nearest vet", "closest vet", "where to find nearest vet", "how can i find the closest vet near me"],
+        "responses": ["Just ask Zeus 'nearby vet' and he'll help you"]
+       },
+
+
+
+       {"tag": "fracture",
+        "patterns": ["fractured leg ", "fractured paw", "i found a dog whos leg is fractured", "fracture","found a dog who has fractured bone"],
+        "responses": ["1)First thing to notice is if she is limping. Limping or not putting any weight on hurt leg means a bone damage as compared to muscle/skin damage.\n 2)If she is limping heavily, try to make it so that she does not have to move around much.\n3)If bone is broken, every step will cause further damage.\n4)If she is docile and there is no danger of her biting you, inspect leg for open wound.\n5)You should apply 'himax' cream on wound after cleaning with hydrogen peroxide as it is one the few creams that dogs do not lick off.\n\n Warning - Do not give any human medicine or painkillers."]
+       }
+]
+}

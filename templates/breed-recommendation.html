@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/breed_style.css')}}" />
+  </head>
+  <body>
+    <div class="breed-section">
+      <div class="breed-main">
+        <a href="/"
+          ><img src="{{url_for('static', filename='svg/logo.svg')}}" alt=""
+        /></a>
+        <h2>Breed Recommendation</h2>
+
+        <form method="post" action="/breed-recommendation">
+          <div>
+            <div class="first">
+              <input
+                type="text"
+                name="temperament"
+                id="temperament"
+                placeholder="Enter the dog's temperament" />
+              <input
+                type="text"
+                name="group"
+                id="group"
+                placeholder="Enter the dog's group" />
+              <input
+                type="text"
+                name="shedding"
+                id="shedding"
+                placeholder="Enter the dog's shedding category" />
+              <input
+                type="text"
+                name="grooming"
+                id="grooming"
+                placeholder="Enter the dog's grooming frequency category" />
+            </div>
+            <div class="second">
+              <input
+                type="text"
+                name="energy"
+                id="energy"
+                placeholder="Enter the dog's energy level category" />
+              <input
+                type="text"
+                name="trainability"
+                id="trainability"
+                placeholder="Enter the dog's trainability category" />
+              <input
+                type="text"
+                name="demeanor"
+                id="demeanor"
+                placeholder="Enter the dog's demeanor category" />
+            </div>
+          </div>
+          <button type="submit">Predict</button>
+        </form>
+      </div>
+
+      <div class="breed-result">
+        {% if prediction %}
+        <h3>Predicted Dog Breed</h3>
+        <p>{{ prediction }}</p>
+        {% endif %}
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="contact" id="contact">
+      <div class="about">
+        <div class="logo">
+          <img src="{{url_for('static', filename='svg/logo.svg')}}" alt="" />
+          <p>ForDoggoZ</p>
+        </div>
+
+        <div class="aboutUS">
+          <h3>About Us</h3>
+          <p>
+            " For DoggoZ - Your one-stop destination for credible information
+            and resources on everything related to dogs "
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3>Get in touch with us</h3>
+        <div class="input-field">
+          <input type="text" placeholder="Name" />
+          <input type="text" placeholder="Email" />
+        </div>
+        <textarea cols="10" rows="10" placeholder="Message"></textarea>
+        <button>send message</button>
+      </div>
+    </div>
+
+    <div class="footer">
+      2022-23 Copyright &copy; All Rights Reserved | For DoggoZ
+    </div>
+  </body>
+</html>

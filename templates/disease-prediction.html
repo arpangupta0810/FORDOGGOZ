@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/disease_style.css')}}" />
+  </head>
+  <body>
+    <div class="disease-section">
+      <div class="disease-main">
+        <a href="/"
+          ><img src="{{url_for('static', filename='svg/logo.svg')}}" alt=""
+        /></a>
+        <h2>Disease Prediction</h2>
+
+        <form class="disease" action="disease-prediction" method="POST">
+          <div>
+            <select id="symp1" name="symptom1">
+              <option value="none">symptom 1</option>
+              <option value="Weakness">Weakness</option>
+              <option value="Skin Rash">Skin Rash</option>
+              <option value="Vomiting">Vomiting</option>
+              <option value="Skin Tumors">Skin Tumors</option>
+              <option value="Yeast Infection">Yeast Infection</option>
+              <option value="Joint Pain">Joint Pain</option>
+              <option value="Chronic Diarrhea">Chronic Diarrhea</option>
+              <option value="Hair Loss">Hair Loss</option>
+              <option value="Gastrointestinal Problems">
+                Gastrointestinal Problems
+              </option>
+              <option value="Dry Skin">Dry Skin</option>
+              <option value="Difficulty Walking">Difficulty Walking</option>
+              <option value="Older Age">Older Age</option>
+              <option value="Urine Blood">Urine Blood</option>
+              <option value="Stomach Pain">Stomach Pain</option>
+              <option value="Swollen Abdomen">Swollen Abdomen</option>
+              <option value="Excessive Drooling">Excessive Drooling</option>
+              <option value="Abnormal Bleeding">Abnormal Bleeding</option>
+              <option value="Wounds">Wounds</option>
+              <option value="Cough">Cough</option>
+              <option value="Lung Problem">Lung Problem</option>
+              <option value="Heart Disease">Heart Disease</option>
+              <option value="Fungal Infection">Fungal Infection</option>
+              <option value="Abscess">Abscess</option>
+              <option value="Fatty Tumor">Fatty Tumor</option>
+              <option value="Fever">Fever</option>
+              <option value="Sneezing">Sneezing</option>
+              <option value="Difficulty Breathing">Difficulty Breathing</option>
+              <option value="Bad Breath">Bad Breath</option>
+              <option value="Bloody Saliva">Bloody Saliva</option>
+              <option value="Red Gums">Red Gums</option>
+              <option value="Bleeding Gums">Bleeding Gums</option>
+              <option value="Difficulty Eating">Difficulty Eating</option>
+              <option value="Head Shaking">Head Shaking</option>
+              <option value="Ear Swelling">Ear Swelling</option>
+              <option value="Excessive Tearing">Excessive Tearing</option>
+              <option value="Dry Eye">Dry Eye</option>
+              <option value="Eye Inflamation">Eye Inflamation</option>
+              <option value="Sore Genital">Sore Genital</option>
+              <option value="Weak Bladder">Weak Bladder</option>
+              <option value="Prostate Disorders">Prostate Disorders</option>
+              <option value="Weight Loss">Weight Loss</option>
+              <option value="Lost Appetite">Lost Appetite</option>
+            </select>
+            <select id="symp2" name="symptom2">
+              <option value="none">symptom 2</option>
+              <option value="Weakness">Weakness</option>
+              <option value="Skin Rash">Skin Rash</option>
+              <option value="Vomiting">Vomiting</option>
+              <option value="Skin Tumors">Skin Tumors</option>
+              <option value="Yeast Infection">Yeast Infection</option>
+              <option value="Joint Pain">Joint Pain</option>
+              <option value="Chronic Diarrhea">Chronic Diarrhea</option>
+              <option value="Hair Loss">Hair Loss</option>
+              <option value="Gastrointestinal Problems">
+                Gastrointestinal Problems
+              </option>
+              <option value="Dry Skin">Dry Skin</option>
+              <option value="Difficulty Walking">Difficulty Walking</option>
+              <option value="Older Age">Older Age</option>
+              <option value="Urine Blood">Urine Blood</option>
+              <option value="Stomach Pain">Stomach Pain</option>
+              <option value="Swollen Abdomen">Swollen Abdomen</option>
+              <option value="Excessive Drooling">Excessive Drooling</option>
+              <option value="Abnormal Bleeding">Abnormal Bleeding</option>
+              <option value="Wounds">Wounds</option>
+              <option value="Cough">Cough</option>
+              <option value="Lung Problem">Lung Problem</option>
+              <option value="Heart Disease">Heart Disease</option>
+              <option value="Fungal Infection">Fungal Infection</option>
+              <option value="Abscess">Abscess</option>
+              <option value="Fatty Tumor">Fatty Tumor</option>
+              <option value="Fever">Fever</option>
+              <option value="Sneezing">Sneezing</option>
+              <option value="Difficulty Breathing">Difficulty Breathing</option>
+              <option value="Bad Breath">Bad Breath</option>
+              <option value="Bloody Saliva">Bloody Saliva</option>
+              <option value="Red Gums">Red Gums</option>
+              <option value="Bleeding Gums">Bleeding Gums</option>
+              <option value="Difficulty Eating">Difficulty Eating</option>
+              <option value="Head Shaking">Head Shaking</option>
+              <option value="Ear Swelling">Ear Swelling</option>
+              <option value="Excessive Tearing">Excessive Tearing</option>
+              <option value="Dry Eye">Dry Eye</option>
+              <option value="Eye Inflamation">Eye Inflamation</option>
+              <option value="Sore Genital">Sore Genital</option>
+              <option value="Weak Bladder">Weak Bladder</option>
+              <option value="Prostate Disorders">Prostate Disorders</option>
+              <option value="Weight Loss">Weight Loss</option>
+              <option value="Lost Appetite">Lost Appetite</option>
+            </select>
+            <select id="symp3" name="symptom3">
+              <option value="none">symptom 3</option>
+              <option value="Weakness">Weakness</option>
+              <option value="Skin Rash">Skin Rash</option>
+              <option value="Vomiting">Vomiting</option>
+              <option value="Skin Tumors">Skin Tumors</option>
+              <option value="Yeast Infection">Yeast Infection</option>
+              <option value="Joint Pain">Joint Pain</option>
+              <option value="Chronic Diarrhea">Chronic Diarrhea</option>
+              <option value="Hair Loss">Hair Loss</option>
+              <option value="Gastrointestinal Problems">
+                Gastrointestinal Problems
+              </option>
+              <option value="Dry Skin">Dry Skin</option>
+              <option value="Difficulty Walking">Difficulty Walking</option>
+              <option value="Older Age">Older Age</option>
+              <option value="Urine Blood">Urine Blood</option>
+              <option value="Stomach Pain">Stomach Pain</option>
+              <option value="Swollen Abdomen">Swollen Abdomen</option>
+              <option value="Excessive Drooling">Excessive Drooling</option>
+              <option value="Abnormal Bleeding">Abnormal Bleeding</option>
+              <option value="Wounds">Wounds</option>
+              <option value="Cough">Cough</option>
+              <option value="Lung Problem">Lung Problem</option>
+              <option value="Heart Disease">Heart Disease</option>
+              <option value="Fungal Infection">Fungal Infection</option>
+              <option value="Abscess">Abscess</option>
+              <option value="Fatty Tumor">Fatty Tumor</option>
+              <option value="Fever">Fever</option>
+              <option value="Sneezing">Sneezing</option>
+              <option value="Difficulty Breathing">Difficulty Breathing</option>
+              <option value="Bad Breath">Bad Breath</option>
+              <option value="Bloody Saliva">Bloody Saliva</option>
+              <option value="Red Gums">Red Gums</option>
+              <option value="Bleeding Gums">Bleeding Gums</option>
+              <option value="Difficulty Eating">Difficulty Eating</option>
+              <option value="Head Shaking">Head Shaking</option>
+              <option value="Ear Swelling">Ear Swelling</option>
+              <option value="Excessive Tearing">Excessive Tearing</option>
+              <option value="Dry Eye">Dry Eye</option>
+              <option value="Eye Inflamation">Eye Inflamation</option>
+              <option value="Sore Genital">Sore Genital</option>
+              <option value="Weak Bladder">Weak Bladder</option>
+              <option value="Prostate Disorders">Prostate Disorders</option>
+              <option value="Weight Loss">Weight Loss</option>
+              <option value="Lost Appetite">Lost Appetite</option>
+            </select>
+          </div>
+          <button type="submit">generate report</button>
+        </form>
+      </div>
+
+      <div class="disease-result">
+        <h3>{{disease_heading}}</h3>
+        <div class="disease-info">
+          <div class="disease-ans">
+            <div class="result-ans">
+              <h5>{{disease_name}}</h5>
+              <p>{{my_disease}}</p>
+            </div>
+            <div class="result-ans">
+              <h5>{{disease_desc}}</h5>
+              <p>{{my_description}}</p>
+            </div>
+            <div class="result-ans">
+              <h5>{{diet_recm}}</h5>
+              <p>{{my_diet}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="contact" id="contact">
+      <div class="about">
+        <div class="logo">
+          <img src="{{url_for('static', filename='svg/logo.svg')}}" alt="" />
+          <p>ForDoggoZ</p>
+        </div>
+
+        <div class="aboutUS">
+          <h3>About Us</h3>
+          <p>
+            " For DoggoZ - Your one-stop destination for credible information
+            and resources on everything related to dogs "
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3>Get in touch with us</h3>
+        <div class="input-field">
+          <input type="text" placeholder="Name" />
+          <input type="text" placeholder="Email" />
+        </div>
+        <textarea cols="10" rows="10" placeholder="Message"></textarea>
+        <button>send message</button>
+      </div>
+    </div>
+
+    <div class="footer">
+      2022-23 Copyright &copy; All Rights Reserved | For DoggoZ
+    </div>
+  </body>
+</html>

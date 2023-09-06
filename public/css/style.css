@@ -1,0 +1,705 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --primary-color: #25a15e;
+  --secondary-color: #000000;
+  --third-color: #ffffff;
+  --fourth-color: grey;
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Poppins", sans-serif;
+  --third-font: "Pacifico", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--primary-font);
+  scroll-behavior: smooth;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: var(--third-color);
+}
+
+.home {
+  background: url(./../img/back.webp) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  color: var(--third-color);
+  font-family: var(--primary-font);
+}
+
+.home nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 5rem;
+}
+
+.home nav img {
+  width: 5rem;
+}
+
+.home nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.home nav ul li {
+  margin: 0rem 0.5rem 0.5rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.home nav ul li:hover {
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+
+.home-context {
+  padding: 0rem 7rem;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  height: 80vh;
+}
+
+.home-context h1,
+h3 {
+  /* text-shadow: 2px 2px var(--fourth-color); */
+  font-family: var(--third-font);
+}
+
+.home-context h1 {
+  font-size: 4.5rem;
+  line-height: 1.1;
+}
+
+.home-context h3 {
+  font-size: 2rem;
+}
+
+.home-context p {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.home-context button {
+  font-size: 0.9rem;
+  background-color: transparent;
+  color: var(--third-color);
+  outline: none;
+  border: var(--third-color) solid 1px;
+  margin: 1rem 0.2rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 0.2rem;
+  transition: 1s;
+}
+
+.home-context button:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--secondary-color);
+  transition: 1s;
+}
+
+.home-context .register:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.home-context .register {
+  background-color: var(--third-color);
+  color: var(--secondary-color);
+}
+
+.us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--third-color);
+}
+
+.us img {
+  width: 7rem;
+}
+
+.us .point {
+  width: 20rem;
+  height: 20rem;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  text-align: center;
+  margin: 0rem 1rem 1rem;
+}
+
+.us .point h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.us .point p {
+  font-size: 0.8rem;
+  font-family: var(--primary-font);
+}
+
+.service {
+  color: var(--third-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70vh;
+  background: linear-gradient(
+    var(--secondary-color),
+    var(--secondary-color),
+    50%,
+    var(--third-color) 50%,
+    var(--third-color) 100%
+  );
+  padding-bottom: 5rem;
+}
+
+.service {
+  color: var(--third-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70vh;
+  background: linear-gradient(
+    var(--secondary-color),
+    var(--secondary-color),
+    50%,
+    var(--third-color) 50%,
+    var(--third-color) 100%
+  );
+  padding-bottom: 5rem;
+}
+
+.service h1 {
+  font-size: 3rem;
+  padding: 1.5rem;
+}
+
+.container {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: var(--secondary-color);
+}
+
+.container .box {
+  position: relative;
+  width: 200px;
+  height: 250px;
+  background: var(--third-color);
+  padding: 100px 40px 60px;
+  box-shadow: 0 15px 45px rga(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.container .box::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-color);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s;
+}
+
+.container .box:hover::before {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+}
+
+.container .box h2 {
+  position: absolute;
+  left: 40px;
+  top: 60px;
+  font-size: 3.5em;
+  font-weight: 800;
+  z-index: 1;
+  opacity: 0.1;
+  transition: 0.5s;
+  color: #555;
+}
+
+.container .box:hover h2 {
+  opacity: 1;
+  color: var(--third-color);
+  transform: translateY(-40px);
+}
+
+.container .box h3 {
+  position: relative;
+  font-size: 1.25em;
+  z-index: 2;
+  color: #333;
+  transform: 0.5s;
+}
+
+.container .box p {
+  position: relative;
+  font-size: 0.8rem;
+  z-index: 2;
+  color: #555;
+  transform: 0.5s;
+}
+
+.container .box:hover h3,
+.container .box:hover p {
+  color: var(--third-color);
+}
+
+#creators {
+  padding: 3rem;
+  background-color: var(--secondary-color);
+  color: var(--third-color);
+}
+
+#creators h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: var(--primary-font);
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+#creators div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#creators span img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 10rem;
+  margin: 1rem 0rem 0.5rem 0rem;
+}
+
+#creators span {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+
+.contact {
+  background-color: var(--secondary-color);
+  padding: 2rem 5rem;
+  color: var(--third-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.contact .logo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.contact .logo img {
+  width: 3rem;
+}
+
+.contact .logo p {
+  font-family: var(--third-font);
+  font-size: 1.1rem;
+}
+
+.contact .aboutUS {
+  padding: 1rem;
+}
+
+.contact .aboutUS h3 {
+  font-family: var(--primary-font);
+  font-size: 1rem;
+}
+
+.contact .aboutUS p {
+  font-family: var(--secondary-font);
+  font-size: 0.8rem;
+  max-width: 15rem;
+  margin-top: 0.5rem;
+  text-align: justify;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  font-family: var(--primary-font);
+}
+
+.contact-form input,
+textarea {
+  margin: 0.5rem 0rem 0rem;
+  background-color: rgb(26, 24, 24);
+  color: var(--fourth-color);
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  font-family: var(--secondary-font);
+  font-size: 0.7rem;
+  border-radius: 5px;
+}
+
+.contact-form textarea {
+  max-width: 18.3rem;
+}
+
+.contact-form input {
+  height: 1rem;
+}
+
+.contact-form button {
+  background-color: var(--primary-color);
+  color: var(--third-color);
+  padding: 0.4rem 0.2rem 0.5rem;
+  border: none;
+  font-family: var(--primary-font);
+  border-radius: 5px;
+  margin-top: 0.5rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 0.5rem;
+  font-family: var(--primary-font);
+  color: var(--third-color);
+  background-color: var(--secondary-color);
+  font-size: 0.9rem;
+}
+
+/* Modal */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1rem;
+  color: black;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 0.9rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  font-size: 0.8rem;
+  transition: 0.2s;
+  color: #9b9b9b;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 0.8rem;
+    color: #11998e;
+    font-weight: 700;
+  }
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field {
+  &:required,
+  &:invalid {
+    box-shadow: none;
+  }
+}
+
+.modal {
+  display: none;
+}
+
+.modal.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.87);
+  z-index: 100;
+}
+
+.modal-container {
+  max-height: 90vh;
+  min-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--third-color);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.726);
+}
+@media (max-width: 600px) {
+  .modal-container {
+    width: 90%;
+  }
+}
+
+.modal-container-header {
+  padding: 16px 32px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-container-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.modal-container-title svg {
+  width: 32px;
+  height: 32px;
+  color: #750550;
+}
+
+.modal-container-body {
+  padding: 24px 32px 30px;
+  overflow-y: auto;
+}
+
+.rtf h1,
+.rtf h2,
+.rtf h3,
+.rtf h4,
+.rtf h5,
+.rtf h6 {
+  font-weight: 700;
+}
+.rtf h1 {
+  font-size: 1.5rem;
+  line-height: 1.125;
+}
+.rtf h2 {
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+.rtf h3 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.rtf > * + * {
+  margin-top: 1em;
+}
+.rtf > * + :is(h1, h2, h3) {
+  margin-top: 2em;
+}
+.rtf > :is(h1, h2, h3) + * {
+  margin-top: 0.75em;
+}
+.rtf ul,
+.rtf ol {
+  margin-left: 20px;
+  list-style-position: inside;
+}
+.rtf ol {
+  list-style: numeric;
+}
+.rtf ul {
+  list-style: disc;
+}
+
+.modal-container-footer {
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-top: 1px solid #ddd;
+  gap: 12px;
+  position: relative;
+}
+.modal-container-footer:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -51px;
+  left: 24px;
+  right: 24px;
+  height: 50px;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+.button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+.button.is-ghost:hover,
+.button.is-ghost:focus {
+  background-color: #dfdad7;
+}
+.button.is-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.button.is-primary:hover,
+.button.is-primary:focus {
+  background-color: var(--primary-color);
+}
+
+.icon-button {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.15s ease;
+}
+.icon-button svg {
+  width: 24px;
+  height: 24px;
+}
+.icon-button:hover,
+.icon-button:focus {
+  background-color: #dfdad7;
+}
+
+.freespace {
+  height: 40vh;
+  background: url(./../img/dog_back.webp);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.containers {
+  background-color: var(--secondary-color);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  color: var(--third-color);
+  width: 100%;
+  padding: 2rem 0rem;
+}
+
+.containers h1 {
+  font-size: 3rem;
+}
+
+#locationForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#locationForm input {
+  width: 70%;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  height: 3rem;
+  outline: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  height: 5.2rem;
+  padding: 0rem 1rem;
+  font-size: 1.5rem;
+  border: none;
+  color: var(--third-color);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

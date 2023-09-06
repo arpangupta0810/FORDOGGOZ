@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/vet_style.css')}}" />
+  </head>
+  <body>
+    <div class="vet-section">
+      <div class="vet-main">
+        <a href="/"
+          ><img src="{{url_for('static', filename='svg/logo.svg')}}" alt=""
+        /></a>
+        <h2>Vet Recommendation</h2>
+
+        <form class="vet" action="/vet-recommendation" method="POST">
+          <div>
+            <select name="city_name" class="input">
+              <option value="none">Select City</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Gurgaon">Gurgaon</option>
+              <option value="Faridabad">Faridabad</option>
+              <option value="Noida">Noida</option>
+            </select>
+            <input
+              name="sector_num"
+              id="input"
+              class="input"
+              type="number"
+              placeholder="Sector No." />
+          </div>
+          <button type="submit">search vet</button>
+        </form>
+      </div>
+
+      <div class="vet-result">
+        <h3>{{vet_heading}}</h3>
+        <p>{{my_vet}}</p>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="contact" id="contact">
+      <div class="about">
+        <div class="logo">
+          <img src="{{url_for('static', filename='svg/logo.svg')}}" alt="" />
+          <p>ForDoggoZ</p>
+        </div>
+
+        <div class="aboutUS">
+          <h3>About Us</h3>
+          <p>
+            "For DoggoZ - Your one-stop destination for credible information and
+            resources on everything related to dogs"
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3>Get in touch with us</h3>
+        <div class="input-field">
+          <input type="text" placeholder="Name" />
+          <input type="text" placeholder="Email" />
+        </div>
+        <textarea cols="10" rows="10" placeholder="Message"></textarea>
+        <button>send message</button>
+      </div>
+    </div>
+
+    <div class="footer">&copy; 2022-23 All Rights Reserved | For DoggoZ</div>
+  </body>
+</html>
